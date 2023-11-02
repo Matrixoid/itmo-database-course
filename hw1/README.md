@@ -6,20 +6,20 @@
 
 ##### 1. Добавьте студентов в группу M34391
 
-<sub>Кучма Андрей Андреевич
-Шехунов Максим Александрович
-Дзестелов Хетаг Артурович
+<sub>Кучма Андрей Андреевич\
+Шехунов Максим Александрович\
+Дзестелов Хетаг Артурович\
 Жогова Мария Сергеевна<sub>
 
 ##### 1.1. Использованный оператор
 
 ```sql
-	INSERT INTO Students(student_id, name, group_id)
-	VALUES
-  	(4, 'Кучма Андрей Андреевич', 2),
-  	(5, 'Шехунов Максим Александрович', 2),
-  	(6, 'Дзестелов Хетаг Артурович', 2),
-  	(7, 'Жогова Мария Сергеевна', 2);
+INSERT INTO Students(student_id, name, group_id)
+VALUES
+  (4, 'Кучма Андрей Андреевич', 2),
+  (5, 'Шехунов Максим Александрович', 2),
+  (6, 'Дзестелов Хетаг Артурович', 2),
+  (7, 'Жогова Мария Сергеевна', 2);
 ```
 
 ##### 1.2. Результат исполнения
@@ -43,8 +43,8 @@
 
 ##### 2.3
 
-<sub>select count(*)
-from Students 
+<sub>select count(*)\
+from Students\
 where group_id in (select group_id from Groups where group_no = 'M34391');
 <sub>
 
@@ -52,16 +52,16 @@ where group_id in (select group_id from Groups where group_no = 'M34391');
 
 ##### 2.4
 
-<sub>select count(*) 
-from Students natural join Groups 
+<sub>select count(*)\
+from Students natural join Groups\
 where name like '%зе%' or group_no like '%7%';<sub>
 
 	3
 
 ##### 2.5
 
-<sub>select count(*) 
-from Students natural join Groups 
+<sub>select count(*)\
+from Students natural join Groups\
 where name like '%v' and group_no like '%7%';<sub>
 
 	1
@@ -70,7 +70,9 @@ where name like '%v' and group_no like '%7%';<sub>
 
 ##### 3.1. Использованный оператор
 
-	DELETE FROM Groups WHERE 1=1;
+```sql
+DELETE FROM Groups WHERE 1=1;
+```
 
 ##### 3.2. Результат исполнения
 
@@ -81,7 +83,9 @@ where name like '%v' and group_no like '%7%';<sub>
 
 ##### 4.1. Использованный оператор
 
-	DELETE FROM Students WHERE 1=1;
+```sql
+DELETE FROM Students WHERE 1=1;
+```
 
 ##### 4.2. Результат исполнения
 
@@ -93,7 +97,9 @@ where name like '%v' and group_no like '%7%';<sub>
 
 ##### 5.1. Использованный оператор
 
-	DELETE FROM Groups WHERE 1=1;
+```sql
+DELETE FROM Groups WHERE 1=1;
+```
 
 ##### 5.2. Результат исполнения
 
@@ -101,33 +107,33 @@ where name like '%v' and group_no like '%7%';<sub>
 
 ##### 6. Добавьте в базу информацию о студентах
 
-<sub>Группа M34361: 1 студент
-Группа M34371: 4 студента
-Группа M34381: 3 студента
+<sub>Группа M34361: 1 студент\
+Группа M34371: 4 студента\
+Группа M34381: 3 студента\
 Группа M34391: 2 студента<sub>
 
 ##### 6.1. Использованные операторы
 
 ```sql
-	INSERT INTO Groups
-	VALUES
-	  (1, 'M34361'),
-	  (2, 'M34371'),
-	  (3, 'M34381'),
-	  (4, 'M34391');
+INSERT INTO Groups
+VALUES
+  (1, 'M34361'),
+  (2, 'M34371'),
+  (3, 'M34381'),
+  (4, 'M34391');
 	
-	INSERT INTO Students
-	VALUES
-	  (1, 'Бац Константин Александрович', 1),
-	  (2, 'Ахметов Марсель Ринатович', 2),
-	  (3, 'Джахбаров Владимир Юрьевич', 2),
-	  (4, 'Чмыхалов Артемий Витальевич', 2),
-	  (5, 'Фроликов Борис Дмитриевич', 2),
-	  (6, 'Фитисов Артём Вячеславович', 3),
-	  (7, 'Юдов Виктор Сергеевич', 3),
-	  (8, 'Подцепко Игорь Сергеевич', 3),
-	  (9, 'Нагибин Вадим Алексеевич', 4),
-	  (10, 'Галибов Михаил Олегович', 4);
+INSERT INTO Students
+VALUES
+  (1, 'Бац Константин Александрович', 1),
+  (2, 'Ахметов Марсель Ринатович', 2),
+  (3, 'Джахбаров Владимир Юрьевич', 2),
+  (4, 'Чмыхалов Артемий Витальевич', 2),
+  (5, 'Фроликов Борис Дмитриевич', 2),
+  (6, 'Фитисов Артём Вячеславович', 3),
+  (7, 'Юдов Виктор Сергеевич', 3),
+  (8, 'Подцепко Игорь Сергеевич', 3),
+  (9, 'Нагибин Вадим Алексеевич', 4),
+  (10, 'Галибов Михаил Олегович', 4);
 ```
 
 ##### 6.2. Результаты исполнения
@@ -139,9 +145,9 @@ where name like '%v' and group_no like '%7%';<sub>
 
 ##### 7.1.
 
-<sub>select group_no, count(*)
-from Groups g inner join Students s on g.group_id = s.group_id 
-group by group_no 
+<sub>select group_no, count(*)\
+from Groups g inner join Students s on g.group_id = s.group_id\
+group by group_no\
 order by group_no desc;<sub>
 
 	 group_no | count
@@ -154,10 +160,10 @@ order by group_no desc;<sub>
 
 ##### 7.2.
 
-<sub>select group_no, count(*)
-from Groups g inner join Students s on g.group_id <> s.group_id 
-where group_no not like '%7%' 
-group by group_no 
+<sub>select group_no, count(*)\
+from Groups g inner join Students s on g.group_id <> s.group_id\
+where group_no not like '%7%'\
+group by group_no\
 order by group_no;<sub>
 
 	 group_no | count
