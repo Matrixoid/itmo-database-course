@@ -109,7 +109,7 @@ hello_world_index -> numeric(3)<sub>
 
 <sub>Схема базы данных<sub>
 
-	[DDL.sql](src/DDL.sql)
+[DDL.sql](src/DDL.sql)
 
 ##### 3.2. DML
 
@@ -117,4 +117,4 @@ hello_world_index -> numeric(3)<sub>
 
 Для удобства чтения данные должны быть записаны в том же порядке, что и в схеме.<sub>
 
-	[DML.sql](src/DML.sql)
+[DML.sql](src/DML.sql)
