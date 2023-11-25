@@ -2,64 +2,64 @@
 
 Структура базы данных «Университет»:
 
-- *Students(StudentId, StudentName, GroupId)*
-- *Groups(GroupId, GroupName)*
-- *Courses(CourseId, CourseName)*
-- *Lecturers(LecturerId, LecturerName)*
-- *Plan(GroupId, CourseId, LecturerId)*
-- *Marks(StudentId, CourseId, Mark)*
+- <em>Students(StudentId, StudentName, GroupId)</em>
+- <em>Groups(GroupId, GroupName)</em>
+- <em>Courses(CourseId, CourseName)</em>
+- <em>Lecturers(LecturerId, LecturerName)</em>
+- <em>Plan(GroupId, CourseId, LecturerId)</em>
+- <em>Marks(StudentId, CourseId, Mark)</em>
 
 Составьте выражения реляционной алгебры и соответствующие SQL-запросы, позволяющие получать
 
 <ol>
 <li> Информацию о студентах<br/>
-	1. С заданным идентификатором (*StudentId*, *StudentName*, *GroupId* по *:StudentId*).<br/>
-	2. С заданным ФИО (*StudentId*, *StudentName*, *GroupId* по *:StudentName*).
+	1. С заданным идентификатором (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:StudentId</em>).<br/>
+	2. С заданным ФИО (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:StudentName</em>).
 </li>
 <li> Полную информацию о студентах<br/>
-	1. С заданным идентификатором (*StudentId*, *StudentName*, *GroupName* по *:StudentId*).<br/>
-	2. С заданным ФИО (*StudentId*, *StudentName*, *GroupName* по *:StudentName*).
+	1. С заданным идентификатором (<em>StudentId</em>, <em>StudentName</em>, <em>GroupName</em> по <em>:StudentId</em>).<br/>
+	2. С заданным ФИО (<em>StudentId</em>, <em>StudentName</em>, <em>GroupName</em> по <em>:StudentName</em>).
 </li>
 <li> Информацию о студентах с заданной оценкой по дисциплине<br/>
-	1. С заданным идентификатором (*StudentId*, *StudentName*, *GroupId* по *:Mark*, *:CourseId*).<br/>
-	2. С заданным названием (*StudentId*, *StudentName*, *GroupId* по *:Mark*, *:CourseName*).<br/>
-	3. Которую у них вёл лектор заданный идентификатором (*StudentId*, *StudentName*, *GroupId* по *:Mark*, *:LecturerId*).<br/>
-	4. Которую у них вёл лектор, заданный ФИО (*StudentId*, *StudentName*, *GroupId* по *:Mark*, *:LecturerName*).<br/>
-	5. Которую вёл лектор, заданный идентификатором (*StudentId*, *StudentName*, *GroupId* по *:Mark*, *:LecturerId*).<br/>
-	6. Которую вёл лектор, заданный ФИО (*StudentId*, *StudentName*, *GroupId* по *:Mark*, *:LecturerName*).
+	1. С заданным идентификатором (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:Mark</em>, <em>:CourseId</em>).<br/>
+	2. С заданным названием (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:Mark</em>, <em>:CourseName</em>).<br/>
+	3. Которую у них вёл лектор заданный идентификатором (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:Mark</em>, <em>:LecturerId</em>).<br/>
+	4. Которую у них вёл лектор, заданный ФИО (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:Mark</em>, <em>:LecturerName</em>).<br/>
+	5. Которую вёл лектор, заданный идентификатором (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:Mark</em>, <em>:LecturerId</em>).<br/>
+	6. Которую вёл лектор, заданный ФИО (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:Mark</em>, <em>:LecturerName</em>).
 </li>
 <li> Информацию о студентах не имеющих оценки по дисциплине<br/>
-	1. Среди всех студентов (*StudentId*, *StudentName*, *GroupId* по *:CourseName*).<br/>
-	2. Среди студентов, у которых есть эта дисциплина (*StudentId*, *StudentName*, *GroupId* по *:CourseName*).
+	1. Среди всех студентов (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:CourseName</em>).<br/>
+	2. Среди студентов, у которых есть эта дисциплина (<em>StudentId</em>, <em>StudentName</em>, <em>GroupId</em> по <em>:CourseName</em>).
 </li>
 <li> Для каждого студента ФИО и названия дисциплин<br/>
-	1. Которые у него есть по плану (*StudentName*, *CourseName*).<br/>
-	2. Есть, но у него нет оценки (*StudentName*, *CourseName*).<br/>
-	3. Есть, но у него не 4 или 5 (*StudentName*, *CourseName*).
+	1. Которые у него есть по плану (<em>StudentName</em>, <em>CourseName</em>).<br/>
+	2. Есть, но у него нет оценки (<em>StudentName</em>, <em>CourseName</em>).<br/>
+	3. Есть, но у него не 4 или 5 (<em>StudentName</em>, <em>CourseName</em>).
 </li>
 <li> Идентификаторы студентов по преподавателю<br/>
-	1. Имеющих хотя бы одну оценку у преподавателя (*StudentId* по *:LecturerName*).<br/>
-	2. Не имеющих ни одной оценки у преподавателя (*StudentId* по *:LecturerName*).<br/>
-	3. Имеющих оценки по всем дисциплинам преподавателя (*StudentId* по *:LecturerName*).<br/>
-	4. Имеющих оценки по всем дисциплинам преподавателя, которые он вёл у этого студента (*StudentId* по *:LecturerName*).
+	1. Имеющих хотя бы одну оценку у преподавателя (<em>StudentId</em> по <em>:LecturerName</em>).<br/>
+	2. Не имеющих ни одной оценки у преподавателя (<em>StudentId</em> по <em>:LecturerName</em>).<br/>
+	3. Имеющих оценки по всем дисциплинам преподавателя (<em>StudentId</em> по <em>:LecturerName</em>).<br/>
+	4. Имеющих оценки по всем дисциплинам преподавателя, которые он вёл у этого студента (<em>StudentId</em> по <em>:LecturerName</em>).
 </li>
 <li> Группы и дисциплины, такие что все студенты группы имеют оценку по этой дисциплине<br/>
-	1. Идентификаторы (*GroupId*, *CourseId*).<br/>
-	2. Названия (*GroupName*, *CourseName*).
+	1. Идентификаторы (<em>GroupId</em>, <em>CourseId</em>).<br/>
+	2. Названия (<em>GroupName</em>, <em>CourseName</em>).
 </li>
 </ol>
 Cоставьте SQL-запросы, позволяющие получать
 <ol start="8">
 <li>Суммарный балл<br/>
-1. Одного студента (*SumMark* по *:StudentId*).<br/>
-2. Каждого студента (*StudentName*, *SumMark*).<br/>
-3. Каждой группы (*GroupName*, *SumMark*).
+1. Одного студента (<em>SumMark</em> по <em>:StudentId</em>).<br/>
+2. Каждого студента (<em>StudentName</em>, <em>SumMark</em>).<br/>
+3. Каждой группы (<em>GroupName</em>, <em>SumMark</em>).
 </li>
 <li>Средний балл<br/>
-1. Одного студента (*AvgMark* по *:StudentId*).<br/>
-2. Каждого студента (*StudentName*, *AvgMark*).<br/>
-3. Каждой группы (*GroupName*, *AvgMark*).<br/>
-4. Средний балл средних баллов студентов каждой группы (*GroupName*, *AvgAvgMark*).
+1. Одного студента (<em>AvgMark</em> по <em>:StudentId</em>).<br/>
+2. Каждого студента (<em>StudentName</em>, <em>AvgMark</em>).<br/>
+3. Каждой группы (<em>GroupName</em>, <em>AvgMark</em>).<br/>
+4. Средний балл средних баллов студентов каждой группы (<em>GroupName</em>, <em>AvgAvgMark</em>).
 </li>
-<li>Для каждого студента: число дисциплин, которые у него были, число сданных дисциплин и число несданных дисциплин (*StudentId*, *Total*, *Passed*, *Failed*).</li>
+<li>Для каждого студента: число дисциплин, которые у него были, число сданных дисциплин и число несданных дисциплин (<em>StudentId</em>, <em>Total</em>, <em>Passed</em>, <em>Failed</em>).</li>
 </ol>
