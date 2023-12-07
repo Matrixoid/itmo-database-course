@@ -75,3 +75,11 @@ CREATE TABLE Inventory(
 	ResourceCount INT NOT NULL,
 	FOREIGN KEY (ResourceId) REFERENCES Resources(Id)
 );
+
+CREATE TABLE CharacterResources(
+	CharacterId INT NOT NULL,
+	ResourceId INT NOT NULL,
+	PRIMARY KEY (CharacterId, ResourceId),
+	FOREIGN KEY (CharacterId) REFERENCES Characters(Id),
+	FOREIGN KEY (ResourceId) REFERENCES Resources(Id)
+);

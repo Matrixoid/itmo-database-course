@@ -108,3 +108,9 @@ Inventory - инвентарь пользователя
 	ResourceId -> Count
 Ключи:
 	{ResourceId} - PK
+
+CharacterResources - ресурсы необходимые для возвышения персонажа
+	1. CharacterId - id персонажа
+	2. ResourceId - id ресурса
+Ключи:
+	{CharacterId, ResourceId} - PK
