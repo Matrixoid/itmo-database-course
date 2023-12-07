@@ -1,17 +1,11 @@
 Сущности и их атрибуты:
-Characters - персонажи доступные в игре
-	1. Id - id персонажа
-	2. Name - имя персонажа
-	3. Level - текущий уровень персонажа
-	4. Rank - текущий ранг персонажа
+CharacterLevels - таблица необходимого опыта для прокачки каждого уровня персонажа(их 90)
+	1. Level - уровень
+	2. Experience - необходимый опыт
 Функциональные зависимости:
-	Id -> Name
-	Id -> Level
-	Id -> Rank
-	Name -> Id
+	Level - Experience
 Ключи:
-	{Id} - PK
-	{Name} - K1
+	{Level} - PK
 
 Ranks - возможные ранги персонажей и оружия
 	1. Rank - ранг
@@ -26,6 +20,72 @@ Ranks - возможные ранги персонажей и оружия
 	{Rank} - PK
 	{MinLevel} - K1
 	{MaxLevel} - K2
+
+Characters - персонажи доступные в игре
+	1. Id - id персонажа
+	2. Name - имя персонажа
+	3. Level - текущий уровень персонажа
+	4. Rank - текущий ранг персонажа
+Функциональные зависимости:
+	Id -> Name
+	Id -> Level
+	Id -> Rank
+	Name -> Id
+Ключи:
+	{Id} - PK
+	{Name} - K1
+
+WeaponLevels - таблица необходиомго опыта для прокачки каждого уровня оружия(их 90)
+	1. Level - уровень
+	2. Experience - необходимый опыт
+Функциональные зависимости:
+	Level - Experience
+Ключи:
+	{Level} - PK
+
+Weapons - оружие доступное в игре
+	1. Id - id оружия
+	2. Name - название оружия
+	3. Level - текущий уровень оружия
+	4. Rank - текущий ранг оружия
+Функциональные зависимости:
+	Id -> Name
+	Id -> Level
+	Id -> Rank
+	Name -> Id
+Ключи:
+	{Id} - PK
+	{Name} - K1
+
+ResourceClasses - ресурсы будем делить на 5 классов по методу их добывания и те, которые мы к первым четырём классам отнести не 
+сможем(книги опыта или камни возвышения)
+	1. Id - id класса
+	2. Name - название класса
+Функциональные зависимости:
+	Id -> Name
+	Name -> Id
+Ключи:
+	{Id} - PK
+	{Name} - K1
+
+ResourceCountForCharacterElevations
+	1. ElevationNumber - номер возвышения(всего их 6)
+	2. ResourceClassId - id класса ресурса
+	3. ResourceCount - количество ресурса
+Функциональные зависимости:
+	ElevationNumber, ResourceClassId -> ResourceCount
+Ключи:
+	{ElevationNumber, ResourceClassId} - PK
+
+ResourceCountForWeaponElevations
+	1. ElevationNumber - номер возвышения(всего их 6)
+	2. ResourceClassId - id класса ресурса
+	3. ResourceType - для возвышения оружия требуется 3 вида ресурсов, два из которых одного класса. Чтобы их различать введём тип
+	4. ResourceCount - количество ресурса
+Функциональные зависимости:
+	ElevationNumber, ResourceClassId, ResourceType -> ResourceCount
+Ключи:
+	{ElevationNumber, ResourceClassId, ResourceType} - PK
 
 Resources - виды ресурсов, существующих в игре и необходимых для прокачки персонажей или оружия
 	1. Id - id ресурса
@@ -48,63 +108,3 @@ Inventory - инвентарь пользователя
 	ResourceId -> Count
 Ключи:
 	{ResourceId} - PK
-
-ResourceClasses - ресурсы будем делить на 5 классов по методу их добывания и те, которые мы к первым четырём классам отнести не 
-сможем(книги опыта или камни возвышения)
-	1. Id - id класса
-	2. Name - название класса
-Функциональные зависимости:
-	Id -> Name
-	Name -> Id
-Ключи:
-	{Id} - PK
-	{Name} - K1
-
-ResourceCountForCharacterElevations
-	1. ElevationNumber - номер возвышения(всего их 6)
-	2. ResourceClassId - id класса ресурса
-	3. ResourceCount - количество ресурса
-Функциональные зависимости:
-	ElevationNumber, ResourceClassId -> ResourceCount
-Ключи:
-	{ElevationNumber, ResourceClassId} - PK
-
-CharacterLevels - таблица необходимого опыта для прокачки каждого уровня персонажа(их 90)
-	1. Level - уровень
-	2. Experience - необходимый опыт
-Функциональные зависимости:
-	Level - Experience
-Ключи:
-	{Level} - PK
-
-Weapons - оружие доступное в игре
-	1. Id - id оружия
-	2. Name - название оружия
-	3. Level - текущий уровень оружия
-	4. Rank - текущий ранг оружия
-Функциональные зависимости:
-	Id -> Name
-	Id -> Level
-	Id -> Rank
-	Name -> Id
-Ключи:
-	{Id} - PK
-	{Name} - K1
-
-ResourceCountForWeaponElevations
-	1. ElevationNumber - номер возвышения(всего их 6)
-	2. ResourceClassId - id класса ресурса
-	3. ResourceType - для возвышения оружия требуется 3 вида ресурсов, два из которых одного класса. Чтобы их различать введём тип
-	4. ResourceCount - количество ресурса
-Функциональные зависимости:
-	ElevationNumber, ResourceClassId, ResourceType -> ResourceCount
-Ключи:
-	{ElevationNumber, ResourceClassId, ResourceType} - PK
-
-WeaponLevels - таблица необходиомго опыта для прокачки каждого уровня оружия(их 90)
-	1. Level - уровень
-	2. Experience - необходимый опыт
-Функциональные зависимости:
-	Level - Experience
-Ключи:
-	{Level} - PK
