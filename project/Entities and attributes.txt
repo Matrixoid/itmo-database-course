@@ -4,36 +4,98 @@ Characters - персонажи доступные в игре
 	2. Name - имя персонажа
 	3. Level - текущий уровень персонажа
 	4. Rank - текущий ранг персонажа
+Функциональные зависимости:
+	Id -> Name
+	Id -> Level
+	Id -> Rank
+	Name -> Id
+Ключи:
+	{Id} - PK
+	{Name} - K1
+
 Ranks - возможные ранги персонажей и оружия
 	1. Rank - ранг
+Ключи:
+	{Rank} - PK
+
 Resourses - виды ресурсов, существующих в игре и необходимых для прокачки персонажей или оружия
 	1. Id - id ресурса
 	2. Name - название ресурса
 	3. Rarity - редкость ресурса(3, 4 или 5 звёзд)
 	4. ResourseClassId - класс ресурса
+Функциональные зависимости:
+	Id -> Name
+	Id -> Rarity
+	Id -> ResourseClassId
+	Name -> Id
+Ключи:
+	{Id} - PK
+	{Name} - K1
+
 Inventory - инвентарь пользователя
 	1. ResourseId - id ресурса
 	2. ResourseCount - количество ресурса
-ResourseClasses - ресурсы будем делить на 5 классов по методу их добывания и те, которые мы к первым четырём классам отнести не сможем(книги опыта или камни возвышения)
+Функциональные зависимости:
+	ResourseId -> Count
+Ключи:
+	{ResourseId} - PK
+
+ResourseClasses - ресурсы будем делить на 5 классов по методу их добывания и те, которые мы к первым четырём классам отнести не 
+сможем(книги опыта или камни возвышения)
 	1. Id - id класса
 	2. Name - название класса
+Функциональные зависимости:
+	Id -> Name
+	Name -> Id
+Ключи:
+	{Id} - PK
+	{Name} - K1
+
 ResourseCountForCharacterElevations
 	1. ElevationNumber - номер возвышения(всего их 6)
 	2. ResourseClassId - id класса ресурса
 	3. ResourseCount - количество ресурса
+Функциональные зависимости:
+	ElevationNumber, ResourseClassId -> ResourseCount
+Ключи:
+	{ElevationNumber, ResourseClassId} - PK
+
 CharacterLevels - таблица необходимого опыта для прокачки каждого уровня персонажа(их 90)
 	1. Level - уровень
 	2. Experience - необходимый опыт
+Функциональные зависимости:
+	Level - Experience
+Ключи:
+	{Level} - PK
+
 Weapons - оружие доступное в игре
 	1. Id - id оружия
 	2. Name - название оружия
 	3. Level - текущий уровень оружия
 	4. Rank - текущий ранг оружия
+Функциональные зависимости:
+	Id -> Name
+	Id -> Level
+	Id -> Rank
+	Name -> Id
+Ключи:
+	{Id} - PK
+	{Name} - K1
+
 ResourseCountForWeaponElevations
 	1. ElevationNumber - номер возвышения(всего их 6)
 	2. ResourseClassId - id класса ресурса
 	3. ResourseType - для возвышения оружия требуется 3 вида ресурсов, два из которых одного класса. Чтобы их различать введём тип
 	4. ResourseCount - количество ресурса
+Функциональные зависимости:
+	ElevationNumber, ResourseClassId, ResourseType -> ResourseCount
+Ключи:
+	{ElevationNumber, ResourseClassId, ResourseType} - PK
+
 WeaponLevels - таблица необходиомго опыта для прокачки каждого уровня оружия(их 90)
 	1. Level - уровень
 	2. Experience - необходимый опыт
+Функциональные зависимости:
+	Level - Experience
+Ключи:
+	{Level} - PK
