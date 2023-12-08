@@ -3,6 +3,11 @@ SELECT Name, Level, Rank, MinLevel, MaxLevel
 FROM Characters NATURAL JOIN Ranks
 WHERE Level < MinLevel OR Level > MaxLevel
 
+--Выводит оружие, данные о котором некорректы(текущий уровень не удовлетворяет ограничениям текущего ранга)
+SELECT Name, Level, Rank, MinLevel, MaxLevel
+FROM Weapons NATURAL JOIN Ranks
+WHERE Level < MinLevel OR Level > MaxLevel
+
 --Количество опыта, которое необходимо для прокачки пперсонажа от ранга до ранга
 SELECT Rank, SUM(Experience) AS Exp
 FROM Ranks, CharacterLevels

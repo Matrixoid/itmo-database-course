@@ -126,7 +126,9 @@ VALUES
 	(2, 'Рассекающий туман', 70, 4),
 	(3, 'Меч Сокола', 20, 0),
 	(4, 'Небесный меч', 50, 2),
-	(5, 'Благодатный владыка вод', 60, 3);
+	(5, 'Благодатный владыка вод', 60, 3),
+	(6, 'Меч Фавония', 80, 5),
+	(7, 'Бесструнный', 80, 5);
 
 INSERT INTO ResourceCountForCharacterElevations(Rank, ResourceClassId, ResourceRarity, ResourceCount)
 VALUES
