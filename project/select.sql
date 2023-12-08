@@ -1,3 +1,8 @@
+--Выводит персонажей, данные о которых некорректы(текущий уровень не удовлетворяет ограничениям текущего ранга)
+SELECT Name, Level, Rank, MinLevel, MaxLevel
+FROM Characters NATURAL JOIN Ranks
+WHERE Level < MinLevel OR Level > MaxLevel
+
 --Количество опыта, которое необходимо для прокачки пперсонажа от ранга до ранга
 SELECT Rank, SUM(Experience) AS Exp
 FROM Ranks, CharacterLevels
