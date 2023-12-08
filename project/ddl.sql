@@ -36,7 +36,8 @@ CREATE TYPE resourceClass AS ENUM ('resourceFromMob',
 								   'resourceFromBoss', 
 								   'resourceFromWorld', 
 								   'resourceFromDungeon', 
-								   'other');
+								   'elevationStones',
+								   'experience');
 
 CREATE TABLE ResourceClasses(
 	Id INT PRIMARY KEY,
@@ -46,6 +47,7 @@ CREATE TABLE ResourceClasses(
 CREATE TABLE ResourceCountForCharacterElevations(
 	Rank INT NOT NULL,
 	ResourceClassId INT NOT NULL,
+	ResourceRarity INT NOT NULL CHECK (ResourceRarity >= 1 AND ResourceRarity <= 5),
 	ResourceCount INT NOT NULL,
 	PRIMARY KEY(Rank, ResourceClassId),
 	FOREIGN KEY (Rank) REFERENCES Ranks(Rank),
@@ -56,8 +58,9 @@ CREATE TABLE ResourceCountForWeaponElevations(
 	Rank INT NOT NULL,
 	ResourceClassId INT NOT NULL,
 	ResourceType INT NOT NULL CHECK(ResourceType = 0 OR ResourceType = 1),
+	ResourceRarity INT NOT NULL CHECK (ResourceRarity >= 1 AND ResourceRarity <= 5),
 	ResourceCount INT NOT NULL,
-	PRIMARY KEY(Rank, ResourceClassId),
+	PRIMARY KEY(Rank, ResourceClassId, ResourceType),
 	FOREIGN KEY (Rank) REFERENCES Ranks(Rank),
 	FOREIGN KEY (ResourceClassId) REFERENCES ResourceClasses(Id)
 );
@@ -65,7 +68,7 @@ CREATE TABLE ResourceCountForWeaponElevations(
 CREATE TABLE Resources(
 	Id INT PRIMARY KEY,
 	Name VARCHAR(50) NOT NULL,
-	Rarity INT NOT NULL CHECK (Rarity = 3 OR Rarity = 4 OR Rarity = 5),
+	Rarity INT NOT NULL CHECK (Rarity >= 1 AND Rarity <= 5),
 	ResourceClassId INT NOT NULL,
 	FOREIGN KEY (ResourceClassId) REFERENCES ResourceClasses(Id)
 );

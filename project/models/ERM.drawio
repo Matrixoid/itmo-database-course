@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-07T19:04:04.157Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="saVh8OMss5GjKVtrk8gh" version="22.1.7" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-08T16:49:03.511Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="Y1v5iYKbKOIV4K7FKkJU" version="22.1.7" type="device">
   <diagram name="Страница — 1" id="cmlJvoD0FTOgaTUszq73">
     <mxGraphModel dx="1290" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -44,7 +44,7 @@
           <mxGeometry y="56" width="250" height="30" as="geometry" />
         </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-32" value="ResourceCountForCharacterElevations" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="280" y="162" width="320" height="116" as="geometry" />
+          <mxGeometry x="280" y="162" width="320" height="140" as="geometry" />
         </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-33" value="Rank&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; rank&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;PK" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="PH4KeS33Tz7tsbw5ySrN-32" vertex="1">
           <mxGeometry y="26" width="320" height="30" as="geometry" />
@@ -52,8 +52,11 @@
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-34" value="ResourceClassId&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;id&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; PK" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="PH4KeS33Tz7tsbw5ySrN-32" vertex="1">
           <mxGeometry y="56" width="320" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="telLiUPrzIvWU-ajIfqC-6" value="ResourceRarity&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;rarity" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="PH4KeS33Tz7tsbw5ySrN-32">
+          <mxGeometry y="86" width="320" height="24" as="geometry" />
+        </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-35" value="ResourceCount&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="PH4KeS33Tz7tsbw5ySrN-32" vertex="1">
-          <mxGeometry y="86" width="320" height="30" as="geometry" />
+          <mxGeometry y="110" width="320" height="30" as="geometry" />
         </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-36" value="CharacterLevels" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="280" y="54" width="190" height="86" as="geometry" />
@@ -80,7 +83,7 @@
           <mxGeometry y="110" width="160" height="24" as="geometry" />
         </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-48" value="ResourceCountForWeaponElevations" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="280" y="302" width="320" height="146" as="geometry" />
+          <mxGeometry x="280" y="360" width="320" height="170" as="geometry" />
         </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-49" value="Rank&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; rank&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;PK" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="PH4KeS33Tz7tsbw5ySrN-48" vertex="1">
           <mxGeometry y="26" width="320" height="30" as="geometry" />
@@ -91,8 +94,11 @@
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-54" value="ResourceType&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;type&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;PK" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="PH4KeS33Tz7tsbw5ySrN-48" vertex="1">
           <mxGeometry y="86" width="320" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="telLiUPrzIvWU-ajIfqC-7" value="ResourceRarity&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;rarity" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="PH4KeS33Tz7tsbw5ySrN-48">
+          <mxGeometry y="116" width="320" height="24" as="geometry" />
+        </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-51" value="ResourceCount&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;number" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="PH4KeS33Tz7tsbw5ySrN-48" vertex="1">
-          <mxGeometry y="116" width="320" height="30" as="geometry" />
+          <mxGeometry y="140" width="320" height="30" as="geometry" />
         </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-55" value="WeaponLevels" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="30" y="588" width="190" height="86" as="geometry" />
@@ -148,10 +154,14 @@
             <mxPoint x="600" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PH4KeS33Tz7tsbw5ySrN-79" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;rounded=0;entryX=0.997;entryY=0.081;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+        <mxCell id="PH4KeS33Tz7tsbw5ySrN-79" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;rounded=0;entryX=1.004;entryY=0.053;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1" target="PH4KeS33Tz7tsbw5ySrN-54">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="680" y="320" as="sourcePoint" />
             <mxPoint x="600" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="320" />
+              <mxPoint x="660" y="448" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PH4KeS33Tz7tsbw5ySrN-80" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;rounded=0;entryX=0.997;entryY=0.081;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.001;exitY=0.273;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
@@ -186,7 +196,7 @@
               <mxPoint x="170" y="259" />
               <mxPoint x="170" y="270" />
               <mxPoint x="240" y="270" />
-              <mxPoint x="240" y="343" />
+              <mxPoint x="240" y="401" />
             </Array>
           </mxGeometry>
         </mxCell>

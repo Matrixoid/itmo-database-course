@@ -71,8 +71,10 @@ ResourceClasses - ресурсы будем делить на 5 классов �
 ResourceCountForCharacterElevations
 	1. ElevationNumber - номер возвышения(всего их 6)
 	2. ResourceClassId - id класса ресурса
-	3. ResourceCount - количество ресурса
+	3. Resourcerarity - редкость предмета
+	4. ResourceCount - количество ресурса
 Функциональные зависимости:
+	ElevationNumber, ResourceClassId -> ResourceRarity
 	ElevationNumber, ResourceClassId -> ResourceCount
 Ключи:
 	{ElevationNumber, ResourceClassId} - PK
@@ -81,8 +83,10 @@ ResourceCountForWeaponElevations
 	1. ElevationNumber - номер возвышения(всего их 6)
 	2. ResourceClassId - id класса ресурса
 	3. ResourceType - для возвышения оружия требуется 3 вида ресурсов, два из которых одного класса. Чтобы их различать введём тип
-	4. ResourceCount - количество ресурса
+	4. Resourcerarity - редкость предмета
+	5. ResourceCount - количество ресурса
 Функциональные зависимости:
+	ElevationNumber, ResourceClassId, ResourceType -> ResourceRarity
 	ElevationNumber, ResourceClassId, ResourceType -> ResourceCount
 Ключи:
 	{ElevationNumber, ResourceClassId, ResourceType} - PK

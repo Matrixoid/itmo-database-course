@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-07T19:15:04.854Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="xK_stRhKoQI3Mw0LKjh4" version="22.1.7" type="device">
+<mxfile host="app.diagrams.net" modified="2023-12-08T16:47:58.451Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="xVECBlGMnlADInKcb2ym" version="22.1.7" type="device">
   <diagram name="Страница — 1" id="WU_-PWg-0vQ7AOEL0WZ2">
     <mxGraphModel dx="1288" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -43,17 +43,22 @@
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-13" value="Name&amp;nbsp; &amp;nbsp; &amp;nbsp;resourceClass&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; K1" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="EF2mI1Jkb3rUDJ_Epihl-11" vertex="1">
           <mxGeometry y="56" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EF2mI1Jkb3rUDJ_Epihl-14" value="ResourceCountForCharacterElevations" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="320" y="164" width="290" height="116" as="geometry" />
-        </mxCell>
+        <object label="ResourceCountForCharacterElevations" id="EF2mI1Jkb3rUDJ_Epihl-14">
+          <mxCell style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+            <mxGeometry x="320" y="164" width="290" height="140" as="geometry" />
+          </mxCell>
+        </object>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-15" value="Rank&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;PK&amp;nbsp; &amp;nbsp;FK5" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="EF2mI1Jkb3rUDJ_Epihl-14" vertex="1">
           <mxGeometry y="26" width="290" height="30" as="geometry" />
         </mxCell>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-16" value="ResourceClassId&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; PK&amp;nbsp; &amp;nbsp;FK6" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="EF2mI1Jkb3rUDJ_Epihl-14" vertex="1">
           <mxGeometry y="56" width="290" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="GUYHTTqjsDFJLd0XxWQY-17" value="ResourceRarity&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="EF2mI1Jkb3rUDJ_Epihl-14">
+          <mxGeometry y="86" width="290" height="24" as="geometry" />
+        </mxCell>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-17" value="ResourceCount&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="EF2mI1Jkb3rUDJ_Epihl-14" vertex="1">
-          <mxGeometry y="86" width="290" height="30" as="geometry" />
+          <mxGeometry y="110" width="290" height="30" as="geometry" />
         </mxCell>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-18" value="CharacterLevels" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="320" y="54" width="190" height="86" as="geometry" />
@@ -80,7 +85,7 @@
           <mxGeometry y="110" width="160" height="24" as="geometry" />
         </mxCell>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-26" value="ResourceCountForWeaponElevations" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="320" y="302" width="320" height="146" as="geometry" />
+          <mxGeometry x="310" y="340" width="320" height="170" as="geometry" />
         </mxCell>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-27" value="Rank&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;PK&amp;nbsp; &amp;nbsp; &amp;nbsp;FK7" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="EF2mI1Jkb3rUDJ_Epihl-26" vertex="1">
           <mxGeometry y="26" width="320" height="30" as="geometry" />
@@ -91,8 +96,11 @@
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-29" value="ResourceType&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;PK" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="EF2mI1Jkb3rUDJ_Epihl-26" vertex="1">
           <mxGeometry y="86" width="320" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="GUYHTTqjsDFJLd0XxWQY-16" value="ResourceRarity&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="EF2mI1Jkb3rUDJ_Epihl-26">
+          <mxGeometry y="116" width="320" height="24" as="geometry" />
+        </mxCell>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-30" value="ResourceCount&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" parent="EF2mI1Jkb3rUDJ_Epihl-26" vertex="1">
-          <mxGeometry y="116" width="320" height="30" as="geometry" />
+          <mxGeometry y="140" width="320" height="30" as="geometry" />
         </mxCell>
         <mxCell id="EF2mI1Jkb3rUDJ_Epihl-31" value="WeaponLevels" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="62.5" y="547" width="175" height="86" as="geometry" />
