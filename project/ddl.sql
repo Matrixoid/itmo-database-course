@@ -5,13 +5,13 @@ CREATE TABLE CharacterLevels(
 
 CREATE TABLE Ranks(
 	Rank INT PRIMARY KEY CHECK(Rank >= 0 AND Rank <= 6),
-	MinLevel INT NOT NULL,
-	MaxLevel INT NOT NULL
+	MinLevel INT NOT NULL UNIQUE,
+	MaxLevel INT NOT NULL UNIQUE
 );
 
 CREATE TABLE Characters(
 	Id INT PRIMARY KEY,
-	Name VARCHAR(50) NOT NULL,
+	Name VARCHAR(50) NOT NULL UNIQUE,
 	Level INT NOT NULL,
 	Rank INT NOT NULL,
 	FOREIGN KEY (Level) REFERENCES CharacterLevels(Level),
@@ -25,7 +25,7 @@ CREATE TABLE WeaponLevels(
 
 CREATE TABLE Weapons(
 	Id INT PRIMARY KEY,
-	Name VARCHAR(50) NOT NULL,
+	Name VARCHAR(50) NOT NULL UNIQUE,
 	Level INT NOT NULL,
 	Rank INT NOT NULL,
 	FOREIGN KEY (Level) REFERENCES WeaponLevels(Level),
@@ -41,7 +41,7 @@ CREATE TYPE resourceClass AS ENUM ('resourceFromMob',
 
 CREATE TABLE ResourceClasses(
 	Id INT PRIMARY KEY,
-	Name resourceClass NOT NULL
+	Name resourceClass NOT NULL UNIQUE
 );
 
 CREATE TABLE ResourceCountForCharacterElevations(
@@ -67,7 +67,7 @@ CREATE TABLE ResourceCountForWeaponElevations(
 
 CREATE TABLE Resources(
 	Id INT PRIMARY KEY,
-	Name VARCHAR(50) NOT NULL,
+	Name VARCHAR(50) NOT NULL UNIQUE,
 	Rarity INT NOT NULL CHECK (Rarity >= 1 AND Rarity <= 5),
 	ResourceClassId INT NOT NULL,
 	FOREIGN KEY (ResourceClassId) REFERENCES ResourceClasses(Id)
