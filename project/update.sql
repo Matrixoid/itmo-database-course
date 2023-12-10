@@ -106,7 +106,7 @@ BEGIN
 	FROM Characters C
  		INNER JOIN CharacterResources CR ON Id = CharacterId
  		INNER JOIN Resources R ON R.Id = CR.ResourceId
- 		INNER JOIN ResourceCountForCharacterElevations RC ON R.ResourceClassId = RC.ResourceClassId AND CurRank < RC.Rank AND RC.Rank < NewRank AND RC.ResourceRarity = R.Rarity
+ 		INNER JOIN ResourceCountForCharacterElevations RC ON R.ResourceClassId = RC.ResourceClassId AND CurRank < RC.Rank AND RC.Rank <= NewRank AND RC.ResourceRarity = R.Rarity
  	WHERE C.Name = _Name
  	GROUP BY R.Name
 	UNION
@@ -134,6 +134,6 @@ BEGIN
 	RETURN QUERY 
 	SELECT Name AS CharacterName, (SELECT COUNT(*) = 0 FROM AllResourcesCountWithInventory(Name, _Level)) AS CanElevations
 	FROM Characters
-	WHERE Level <> _Level;
+	WHERE Level < _Level;
 END;
 $$ LANGUAGE plpgsql;
